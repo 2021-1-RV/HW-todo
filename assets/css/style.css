@@ -1,0 +1,99 @@
+:root {
+  --white: #ffffff;
+  --red: #ff0000;
+  --black: #333333;
+  --blue: #00c8ff;
+  --linear: linear-gradient(120deg, var(--red), var(--blue));
+}
+
+body {
+  background: var(--linear);
+  min-height: 100vh;
+  color: var(--white);
+}
+
+h1,
+form {
+  display: flex;
+  min-height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  font-size: 25px;
+  padding: 6px;
+  margin: 6px;
+  border: none;
+}
+.toDoButton {
+  width: 33px;
+  height: 33px;
+  background-image: url(/img/circle.ico);
+  background-color: var(--linear);
+  cursor: pointer;
+}
+
+.toDoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toDoList {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  font-size: 22px;
+  padding: 5px;
+  margin: 5px auto;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.completeBtn,
+.deleteBtn {
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.completeBtn {
+  background: url(/img/galochka.ico) no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: url(/img/trash.ico) no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.toDoDone,
+.toDoDelete {
+  pointer-events: none;
+}
+
+.completedItem {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.fall {
+  transform: translateY(10px) scale(0.4) rotateZ(180deg);
+  opacity: 0;
+}
